@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding:0;
+}
+h1, h2{display: inline-block;}
+h1{font-size: 70px;}
+.flex{display: flex;}
+.box {
+    width: 100%;
+    height: 100%;
+    min-width:1024px;
+    min-height:768px;
+    background-color: fff;
+    overflow: hidden;
+    position: relative;
+    top:0;
+}
+
+.page {width: 100%; margin-top:0;transition: margin-top 0.3s; position: relative;}
+
+.page1{width: 85%; margin: 0 auto; padding-top: 50px; justify-content: space-between; }
+
+
+.page1 .text_wrap{flex-direction: column;}
+.page1 .text_wrap h1:nth-of-type(2){line-height: 300px;}
+h1{position: relative; transition: 0.3;}
+
