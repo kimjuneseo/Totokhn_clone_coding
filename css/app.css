@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding:0;
+}
+h1, h2{display: inline-block;}
+h1{position: relative; transition: 0.3;font-size: 70px;}
+.flex{display: flex;}
+.box { width: 100%; height: 100%; min-width:1024px; min-height:768px; background-color: #fff; overflow: hidden; position: relative; top:0; z-index: 1;}
+.menu{ width: 85%; margin: 0 auto; justify-content: space-between; top: 900px;  left: 100; position: sticky; z-index: 10;}
+.menu img{ height: 30px;}
+
+.page {width: 100%; margin-top:0;transition: margin-top 0.3s; }
+.page1{width: 85%; margin: 0 auto;  position: relative;}
+.page1 .left_text_wrap{justify-content: space-between;}
+.page1 .right_text_wrap{ justify-content: space-between; align-items: center;}
+
+i{height: 100px; }
