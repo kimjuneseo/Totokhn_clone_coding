@@ -4,6 +4,7 @@ class App {
     constructor() {
         this.scroll = 0;
         this.pages = [];
+        this.thisPage;
         this.currentPage = 0;
         this.oneHeader;
         this.twoHeader;
@@ -17,23 +18,23 @@ class App {
         this.oneHeader = document.querySelector("#oneheader")
         this.twoHeader = document.querySelector("#twoheader");
         this.threeHeader = document.querySelector("#threeheader");
+        this.thisPage = document.querySelector('.this_page');
+
         
-        console.log(window.innerWidth);
-        // this.oneHeader.style.left = `${window.innerWidth + 43}px`
-        // this.threeHeader.style.left = `${window.innerWidth + 43}px`
         const h = this.h = window.innerHeight;
         this.pages = document.querySelectorAll(".page");
-        console.log(h);
         box.style.height =`${h}px`;
 
         box.addEventListener("wheel", e => {
             const {deltaY} = e;
             this.scroll = clamp(this.scroll + deltaY/2, 0, h*(3-1));
-            console.log();
+            console.log(deltaY)
+            // this.scroll = window.innerHeight
+            // console.log(this.scroll)
             this.pages[0].style.marginTop = `-${this.scroll}px`;
 
             this.currentPage = Math.ceil(this.scroll / h);
-            
+            this.thisPage.innerHTML = this.currentPage + 1;
             this.changePage();
         });
 
