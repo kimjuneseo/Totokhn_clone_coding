@@ -1,4 +1,5 @@
-const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+ const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 class App {
     constructor() {
@@ -30,7 +31,6 @@ class App {
             this.scroll = clamp(this.scroll + deltaY/2, 0, h*(3-1));
             console.log(deltaY)
             // this.scroll = window.innerHeight
-            // console.log(this.scroll)
             this.pages[0].style.marginTop = `-${this.scroll}px`;
 
             this.currentPage = Math.ceil(this.scroll / h);
