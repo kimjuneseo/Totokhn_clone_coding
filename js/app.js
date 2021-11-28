@@ -27,10 +27,12 @@ class App {
         box.style.height =`${h}px`;
 
         box.addEventListener("wheel", e => {
+            
             const {deltaY} = e;
+            console.log(e);
             this.scroll = clamp(this.scroll + deltaY/2, 0, h*(3-1));
-            console.log(deltaY)
-            // this.scroll = window.innerHeight
+            // console.log(deltaY)
+            this.scroll = window.innerHeight
             this.pages[0].style.marginTop = `-${this.scroll}px`;
 
             this.currentPage = Math.ceil(this.scroll / h);
@@ -42,7 +44,7 @@ class App {
             x.style.height =`${h}px`;
             x.style.marginTop = `0`;
         });
-        
+        scrollReveal().reveal(``)
     }
 
     changePage()
@@ -60,6 +62,8 @@ class App {
             this.threeHeader.style.left = `${left}px`
         }
     }
+
+    
 }
 
 window.onload = () => {
