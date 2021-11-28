@@ -1,8 +1,13 @@
 * {
     margin: 0;
     padding:0;
+    box-sizing: border-box;
 }
+
+ul,li {  }
+
 :root{
+     /* z-index */
     --z-tooltip: 10;
     --z-fixed: 100;
 }
